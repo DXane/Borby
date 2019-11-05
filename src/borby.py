@@ -32,6 +32,7 @@ def parameter(para : list):
     #Display Help Screen
     if '-h' in para or '--help' in para or len(para)==0:
         print("usage: borby.py [-h] [--bytes size] [--csv [FILE]] FILE\n\npositional arguments:\n  FILE        a File or Path to a File to calculate the Entropy of\n\noptional arguments:\n -h, --help   show this message and exit\n --bytes size   Set the Size of the Byte Chunk that will be used\n --csv [FILE] Export the Result in a CSV-File if no File is given a File with the same Name as the used File is generated")
+        exit()
     #Setze die Bytegröße wenn übergeben. Standart=1024 Bytes
     if '--bytes' in para:
         step=int(para[para.index('--bytes')+1])
